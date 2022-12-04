@@ -1,0 +1,21 @@
+﻿<Window x:Class="School.Predmets"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:School"
+        mc:Ignorable="d"
+        Title="Predmets" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button FontSize="18"  Click="Button_Click">Математика</Button>
+            <Button Margin="0,20,0,0" FontSize="18" Click="Button_Click">Русский язык</Button>
+            <Button Margin="0,20,0,0" FontSize="18" Click="Button_Click">Биология</Button>
+            <Button Margin="0,20,0,0" FontSize="18" Click="Button_Click">Физика</Button>
+            <Button Margin="0,20,0,0" FontSize="18" Click="Button_Click">Георграфия</Button>
+            <Button Margin="0,20,0,0" FontSize="18" Click="Button_Click">История</Button>
+        </StackPanel>
+        <Button Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="18" x:Name="exit" Click="exit_Click" >Выход</Button>
+    </Grid>
+    
+</Window>

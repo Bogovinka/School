@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище DatabaseSModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="ID_c" />
+    </Key>
+    <Property Name="ID_c" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_c" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Evaluations">
+    <Key>
+      <PropertyRef Name="ID_t" />
+    </Key>
+    <Property Name="ID_t" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Item_id" Type="int" />
+    <Property Name="Student_id" Type="int" />
+    <Property Name="Yan_e" Type="int" />
+    <Property Name="Fev_e" Type="int" />
+    <Property Name="Mar_e" Type="int" />
+    <Property Name="Apr_e" Type="int" />
+    <Property Name="May_e" Type="int" />
+    <Property Name="Iun_e" Type="int" />
+    <Property Name="Iul_e" Type="int" />
+    <Property Name="Avg_e" Type="int" />
+    <Property Name="Sen_e" Type="int" />
+    <Property Name="Oct_e" Type="int" />
+    <Property Name="Noyab_e" Type="int" />
+    <Property Name="Dec_e" Type="int" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ID_i" />
+    </Key>
+    <Property Name="ID_i" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_i" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Omissions">
+    <Key>
+      <PropertyRef Name="ID_o" />
+    </Key>
+    <Property Name="ID_o" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Student_id" Type="int" />
+    <Property Name="Item_id" Type="int" />
+    <Property Name="Size" Type="int" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="ID_s" />
+    </Key>
+    <Property Name="ID_s" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Class_id" Type="int" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Login" Type="nvarchar" MaxLength="100" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__Evaluatio__Item___3D5E1FD2">
+    <End Role="Item" Type="Self.Item" Multiplicity="0..1" />
+    <End Role="Evaluations" Type="Self.Evaluations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="ID_i" />
+      </Principal>
+      <Dependent Role="Evaluations">
+        <PropertyRef Name="Item_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Evaluatio__Stude__3E52440B">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Evaluations" Type="Self.Evaluations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="ID_s" />
+      </Principal>
+      <Dependent Role="Evaluations">
+        <PropertyRef Name="Student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Omissions__Item___4222D4EF">
+    <End Role="Item" Type="Self.Item" Multiplicity="0..1" />
+    <End Role="Omissions" Type="Self.Omissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="ID_i" />
+      </Principal>
+      <Dependent Role="Omissions">
+        <PropertyRef Name="Item_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Omissions__Stude__412EB0B6">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Omissions" Type="Self.Omissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="ID_s" />
+      </Principal>
+      <Dependent Role="Omissions">
+        <PropertyRef Name="Student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__Class_i__3A81B327">
+    <End Role="Class" Type="Self.Class" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="ID_c" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="Class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище DatabaseSModelContainer">
+    <EntitySet Name="Class" EntityType="Self.Class" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Evaluations" EntityType="Self.Evaluations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Omissions" EntityType="Self.Omissions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Evaluatio__Item___3D5E1FD2" Association="Self.FK__Evaluatio__Item___3D5E1FD2">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Evaluations" EntitySet="Evaluations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Evaluatio__Stude__3E52440B" Association="Self.FK__Evaluatio__Stude__3E52440B">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Evaluations" EntitySet="Evaluations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Omissions__Item___4222D4EF" Association="Self.FK__Omissions__Item___4222D4EF">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Omissions" EntitySet="Omissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Omissions__Stude__412EB0B6" Association="Self.FK__Omissions__Stude__412EB0B6">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Omissions" EntitySet="Omissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__Class_i__3A81B327" Association="Self.FK__Student__Class_i__3A81B327">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

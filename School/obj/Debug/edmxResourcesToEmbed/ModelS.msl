@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище DatabaseSModelContainer" CdmEntityContainer="DatabaseSEntities1">
+    <EntitySetMapping Name="Class">
+      <EntityTypeMapping TypeName="DatabaseSModel.Class">
+        <MappingFragment StoreEntitySet="Class">
+          <ScalarProperty Name="ID_c" ColumnName="ID_c" />
+          <ScalarProperty Name="Name_c" ColumnName="Name_c" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evaluations">
+      <EntityTypeMapping TypeName="DatabaseSModel.Evaluations">
+        <MappingFragment StoreEntitySet="Evaluations">
+          <ScalarProperty Name="ID_t" ColumnName="ID_t" />
+          <ScalarProperty Name="Item_id" ColumnName="Item_id" />
+          <ScalarProperty Name="Student_id" ColumnName="Student_id" />
+          <ScalarProperty Name="Yan_e" ColumnName="Yan_e" />
+          <ScalarProperty Name="Fev_e" ColumnName="Fev_e" />
+          <ScalarProperty Name="Mar_e" ColumnName="Mar_e" />
+          <ScalarProperty Name="Apr_e" ColumnName="Apr_e" />
+          <ScalarProperty Name="May_e" ColumnName="May_e" />
+          <ScalarProperty Name="Iun_e" ColumnName="Iun_e" />
+          <ScalarProperty Name="Iul_e" ColumnName="Iul_e" />
+          <ScalarProperty Name="Avg_e" ColumnName="Avg_e" />
+          <ScalarProperty Name="Sen_e" ColumnName="Sen_e" />
+          <ScalarProperty Name="Oct_e" ColumnName="Oct_e" />
+          <ScalarProperty Name="Noyab_e" ColumnName="Noyab_e" />
+          <ScalarProperty Name="Dec_e" ColumnName="Dec_e" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Item">
+      <EntityTypeMapping TypeName="DatabaseSModel.Item">
+        <MappingFragment StoreEntitySet="Item">
+          <ScalarProperty Name="ID_i" ColumnName="ID_i" />
+          <ScalarProperty Name="Name_i" ColumnName="Name_i" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Omissions">
+      <EntityTypeMapping TypeName="DatabaseSModel.Omissions">
+        <MappingFragment StoreEntitySet="Omissions">
+          <ScalarProperty Name="ID_o" ColumnName="ID_o" />
+          <ScalarProperty Name="Student_id" ColumnName="Student_id" />
+          <ScalarProperty Name="Item_id" ColumnName="Item_id" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="DatabaseSModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="ID_s" ColumnName="ID_s" />
+          <ScalarProperty Name="Class_id" ColumnName="Class_id" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

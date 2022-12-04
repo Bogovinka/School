@@ -1,0 +1,30 @@
+﻿<Window x:Class="School.StudentMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:School"
+        mc:Ignorable="d"
+        Title="StudentMenu" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid Margin="0,0,0,50" x:Name="dg" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Item.Name_i}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="yan" Header="Январь" Binding="{Binding Yan_e}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="fev" Header="Февраль" Binding="{Binding Fev_e}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="mar" Header="Март" Binding="{Binding Mar_e}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="apr" Header="Апрель" Binding="{Binding Apr_e}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="may" Header="Май" Binding="{Binding May_e}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="iun" Header="Июнь" Binding="{Binding Iun_e}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="iul" Header="Июль" Binding="{Binding Iul_e}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="avg" Header="Август" Binding="{Binding Avg_e}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="sen" Header="Сентябрь" Binding="{Binding Sen_e}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="oct" Header="Октябрь" Binding="{Binding Oct_e}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="noyab" Header="Ноябрь" Binding="{Binding Noyab_e}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="dec" Header="Декабрь" Binding="{Binding Dec_e}"></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Средняя" Binding="{Binding SrE}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Margin="5,0,0,5" x:Name="exit" VerticalAlignment="Bottom" FontSize="18" HorizontalAlignment="Left" Click="exit_Click">Выход</Button>
+    </Grid>
+</Window>
