@@ -87,6 +87,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddStident.xaml.cs">
+      <DependentUpon>AddStident.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminMenu.xaml.cs">
       <DependentUpon>AdminMenu.xaml</DependentUpon>
     </Compile>
@@ -116,6 +119,10 @@
     <Compile Include="StudentMenu.xaml.cs">
       <DependentUpon>StudentMenu.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddStident.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

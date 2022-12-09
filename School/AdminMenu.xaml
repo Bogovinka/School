@@ -25,7 +25,10 @@
                 <DataGridTextColumn IsReadOnly="True" Header="Средняя" Binding="{Binding SrE}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Margin="0,0,0,5" HorizontalAlignment="Center" x:Name="SaveB" VerticalAlignment="Bottom" Click="SaveB_Click">Сохранить</Button>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Margin="0,0,0,5" HorizontalAlignment="Center" x:Name="SaveB" VerticalAlignment="Bottom" Click="SaveB_Click">Сохранить</Button>
+            <Button Margin="5,0,0,5" HorizontalAlignment="Center" x:Name="addU" VerticalAlignment="Bottom" Click="addU_Click">Добавить ученика</Button>
+        </StackPanel>
         <Button Margin="5,0,0,5" HorizontalAlignment="Left" x:Name="exit" VerticalAlignment="Bottom" Click="exit_Click">Выход</Button>
     </Grid>
 </Window>

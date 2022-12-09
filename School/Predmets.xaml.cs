@@ -26,6 +26,7 @@ namespace School
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //открытие меню оценок, выбор предмета идет по тексту кнопки
             AdminMenu aM = new AdminMenu(((Button)sender).Content.ToString());
             aM.Show();
             Close();

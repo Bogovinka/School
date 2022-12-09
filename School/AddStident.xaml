@@ -1,0 +1,23 @@
+﻿<Window x:Class="School.AddStident"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:School"
+        mc:Ignorable="d"
+        Title="AddStident" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ScrollViewer Margin="0,0,0,60">
+            <StackPanel>
+                <TextBox x:Name="surnameT" Style="{StaticResource MaterialDesignFilledTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Фамилия" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBox x:Name="nameT" Style="{StaticResource MaterialDesignFilledTextBox}" MaxWidth="300"  Margin="0,10,0,0" materialDesign:HintAssist.Hint="Имя" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox x:Name="LoginT" Style="{StaticResource MaterialDesignFilledTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Логин" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBox x:Name="PasswordT" Style="{StaticResource MaterialDesignFilledTextBox}" MaxWidth="300" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Пароль" FontSize="20" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </StackPanel>
+        </ScrollViewer>
+
+        <Button x:Name="back" VerticalAlignment="Bottom" MinWidth="100" HorizontalAlignment="Left" Margin="20,0,0,10" Click="back_Click">Назад</Button>
+        <Button x:Name="createB" VerticalAlignment="Bottom" MinWidth="100" HorizontalAlignment="Right" Margin="0,0,20,10" Click="createB_Click">Добавить</Button>
+    </Grid>
+</Window>

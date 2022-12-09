@@ -21,6 +21,7 @@ namespace School
     {
         public StudentMenu(int idS)
         {
+            //заполнение БД
             InitializeComponent();
             DatabaseSEntities1 db = new DatabaseSEntities1();
             dg.ItemsSource = db.Evaluations.Where(x => x.Student.ID_s == idS).ToList();
